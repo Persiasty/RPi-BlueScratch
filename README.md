@@ -1,4 +1,4 @@
-# RPi-LED
+# RPi-BlueScratch
 Simple Bluetooth driver for Scratch 1.4 on Raspberry Pi 3
 
 Dependencies:
