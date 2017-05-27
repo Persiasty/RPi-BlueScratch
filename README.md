@@ -11,7 +11,7 @@ Example:
 ![alt example](example.png?raw=true "Example")
 
 How to run it?
-1. Turn on scrach IDE
+1. Turn on scratch IDE
 2. Right-click on the Sensor Value block, found in the sensing category.
 3. Select the "Enable remote sensor connections" option.
 4. Run BlueScratch.py
