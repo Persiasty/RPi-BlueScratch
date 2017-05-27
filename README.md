@@ -1,5 +1,5 @@
 # RPi-BlueScratch
-Simple Bluetooth driver for Scratch 1.4 on Raspberry Pi 3
+Simple Bluetooth Rfcomm driver for Scratch 1.4 on Raspberry Pi 3
 
 Dependencies:
 
@@ -9,3 +9,10 @@ Dependencies:
 Example:
 
 ![alt example](example.png?raw=true "Example")
+
+How to run it?
+1. Turn on scrach IDE
+2. Right-click on the Sensor Value block, found in the sensing category.
+3. Select the "Enable remote sensor connections" option.
+4. Run BlueScratch.py
+5. Connect to RPi BT address and send some data via Rfcomm socket to it
