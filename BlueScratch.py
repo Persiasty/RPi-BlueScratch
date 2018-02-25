@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import subprocess
 import bluetooth
 import scratch
 import signal
@@ -23,7 +24,7 @@ bluetooth.advertise_service(btServer, "Raspberry Pi",
 							service_id = uuid,
 							service_classes = [uuid, bluetooth.SERIAL_PORT_CLASS],
 							profiles = [bluetooth.SERIAL_PORT_PROFILE])
-bdaddr = bluetooth.read_local_bdaddr()
+bdaddr = subprocess.check_output("hciconfig | head -n 2 | tail -n 1 | cut -d ' ' -f 3")
 print("BDA:", bdaddr)
 
 #funkcja, która wykona się w momencie przerwania programu
