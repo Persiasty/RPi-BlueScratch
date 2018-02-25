@@ -23,6 +23,8 @@ bluetooth.advertise_service(btServer, "Raspberry Pi",
 							service_id = uuid,
 							service_classes = [uuid, bluetooth.SERIAL_PORT_CLASS],
 							profiles = [bluetooth.SERIAL_PORT_PROFILE])
+bdaddr = bluetooth.read_local_bdaddr()
+print("BDA:", bdaddr)
 
 #funkcja, która wykona się w momencie przerwania programu
 def signal_kill(signal, frame):
