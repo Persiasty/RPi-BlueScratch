@@ -24,7 +24,9 @@ bluetooth.advertise_service(btServer, "Raspberry Pi",
 							service_id = uuid,
 							service_classes = [uuid, bluetooth.SERIAL_PORT_CLASS],
 							profiles = [bluetooth.SERIAL_PORT_PROFILE])
-bdaddr = subprocess.check_output("hciconfig | head -n 2 | tail -n 1 | cut -d ' ' -f 3")
+out = subprocess.check_output('hciconfig')
+m = re.search(r'BD Address: (?P<bda>[A-F0-9]{2}(:[A-F0-9]{2}){5})', out)
+bdaddr = m.group('bda')
 print("BDA:", bdaddr)
 
 #funkcja, która wykona się w momencie przerwania programu
